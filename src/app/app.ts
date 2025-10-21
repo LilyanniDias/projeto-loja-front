@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { LojaService } from './loja-service';
 
 @Component({
   selector: 'app-root',
@@ -8,5 +9,12 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.css'
 })
 export class App {
-  protected title = 'loja';
+  protected title = 'Loja';
+
+  loja = inject(LojaService)
+  constructor() {
+    this.loja.obterProdutos().subscribe(res => {
+      console.log(res)
+    })
+  }
 }
