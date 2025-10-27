@@ -7,14 +7,16 @@ import { Produto } from './produto';
   providedIn: 'root'
 })
 export class LojaService {
-  private APIURL = 'http://localhost:3000'
-  private http = inject(HttpClient)
+  private APIURL = 'http://localhost:3000';
+  private http = inject(HttpClient);
 
-  obterProdutos(): Observable<any> {
-    return this.http.get<Produto>(`${this.APIURL}/produtos`)
+  // Retorna uma lista de produtos
+  obterProdutos(): Observable<Produto[]> {
+    return this.http.get<Produto[]>(`${this.APIURL}/produtos`);
   }
 
-  obterProdutoPorId(id: number): Observable<any> {
-    return this.http.get<Produto>(`${this.APIURL}/produtos/${id}`)
+  // Retorna apenas um produto pelo ID
+  obterProdutoPorId(id: number): Observable<Produto> {
+    return this.http.get<Produto>(`${this.APIURL}/produtos/${id}`);
   }
 }
