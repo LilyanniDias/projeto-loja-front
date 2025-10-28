@@ -1,14 +1,15 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { LojaService } from './loja-service';
 import { Produto } from './produto';
-import { DecimalPipe, NgFor } from '@angular/common';
+import { DecimalPipe, NgFor, CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 
 @Component({
   selector: 'app-inicio',
   templateUrl: './inicio.html',
   styleUrls: ['./inicio.css'],
-  imports: [DecimalPipe, NgFor]
+  imports: [DecimalPipe, NgFor, CommonModule, RouterModule]
 })
 
 export class InicioComponent implements OnInit {

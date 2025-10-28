@@ -1,1 +1,7 @@
-<p>detalhe-produto works!</p>
+<div class="produto-detalhe" *ngIf="produto">
+  <h2 class="produto-nome">{{ produto.nome }}</h2>
+  <p class="produto-preco">Preço: {{ produto.preco | currency:'BRL' }}</p>
+  <p class="produto-descricao">Descrição: {{ produto.descricao }}</p>
+
+  <button [routerLink]="['/inicio']" class="btn-voltar">Voltar</button>
+</div>

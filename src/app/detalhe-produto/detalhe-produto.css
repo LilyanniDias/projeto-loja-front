@@ -1,0 +1,51 @@
+.produto-detalhe {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 30px 25px;
+  background-color: #d3cccc;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  transition: transform 0.2s ease-in-out;
+}
+
+.produto-detalhe:hover {
+  transform: translateY(-2px);
+}
+
+.produto-nome {
+  font-size: 2rem;
+  color: #000000;
+  margin-bottom: 15px;
+}
+
+.produto-preco {
+  font-size: 1.3rem;
+  color: #5e6360;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.produto-descricao {
+  font-size: 1rem;
+  color: #000000;
+  line-height: 1.5;
+  margin-bottom: 25px;
+}
+
+.btn-voltar {
+  background-color: #000000;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-voltar:hover {
+  background-color: #7a8286;
+  transform: scale(1.05);
+}
